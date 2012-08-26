@@ -26,9 +26,9 @@ models = {
     'svc':  {'algo': SVC,                   'params': [('C',  (100,  1000))]},
     'sgdc': {'algo': SGDClassifier,         'params': []},
     'perc': {'algo': Perceptron,            'params': []},
-    'bnb':  {'algo': BernoulliNB,           'params': []},
-    'mnb':  {'algo': MultinomialNB,         'params': []},
-    'knc':  {'algo': KNeighborsClassifier,  'params': []},
+    'bnb':  {'algo': BernoulliNB,           'params': [('alpha', (.1, .3, 1.))]},
+    'mnb':  {'algo': MultinomialNB,         'params': [('alpha', (.1, .3, 1.))]},
+    'knn':  {'algo': KNeighborsClassifier,  'params': []},
     'nc':   {'algo': NearestCentroid,       'params': []}
 }
 
