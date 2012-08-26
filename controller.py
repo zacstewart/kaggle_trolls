@@ -80,7 +80,7 @@ best_score = 0
 for name, model in models.items():
   print 'Super learning with ' + name + '...'
   if len(model['params']) > 0:
-    instance = GridSearchCV(model['algo'](), dict(model['params']), n_jobs=1)
+    instance = GridSearchCV(model['algo'](), dict(model['params']), n_jobs=-1)
   else:
     instance = model['algo']()
   score = cross_val_score(instance, train_preds[:,1:], train_preds[:,0], cv=5)
